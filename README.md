@@ -1,4 +1,4 @@
 # ml-entry-workshop
 
-My awesome workshop which teach the basic of ML.
+My awesome workshop which teaches the basic of ML.
 
