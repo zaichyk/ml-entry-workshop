@@ -176,8 +176,8 @@ class PhotoRater(QWidget):
         output_dir = os.path.join(root_dir,"data", "dataset")
 
         # Ensure the dataset directories exist
-        like_dir = os.path.join(output_dir, "1")
-        dislike_dir = os.path.join(output_dir, "0")
+        like_dir = os.path.join(output_dir, "Like")
+        dislike_dir = os.path.join(output_dir, "Dislike")
         os.makedirs(like_dir, exist_ok=True)
         os.makedirs(dislike_dir, exist_ok=True)
 
@@ -205,6 +205,7 @@ class PhotoRater(QWidget):
         output_dir = os.path.join(root_dir, "data")
 
         save_path = os.path.join(output_dir, self.output_file_name)
+        os.makedirs(output_dir, exist_ok=True)
         msg = QMessageBox()
         msg.setWindowTitle("Save and Exit")
         msg.setText(f"This will save the results to '{save_path}' and exit.")
