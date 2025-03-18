@@ -1,4 +1,5 @@
 import json
+import random
 import shutil
 import sys
 from datetime import datetime
@@ -47,7 +48,8 @@ class PhotoRater(QWidget):
         super().__init__()
         self.setWindowTitle("Photo Rater")
         self.photo_dir = photo_dir
-        self.photos = [f for f in os.listdir(photo_dir) if f.lower().endswith(('png', 'jpg', 'jpeg'))]
+        self.photos = sorted([f for f in os.listdir(photo_dir) if f.lower().endswith(('png', 'jpg', 'jpeg'))],
+                             key=lambda x: int(os.path.splitext(x)[0]))
         self.output_file_name = output_file_name
         self.current_index = 0
         self.ratings = {}
