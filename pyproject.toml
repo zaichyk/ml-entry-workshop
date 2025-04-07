@@ -14,4 +14,8 @@ dependencies = [
     "scikit-learn>=1.6.1",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
+    "matplotlib",
+    "seaborn>=0.13.2",
+    "ipykernel>=6.29.5",
+    "torchsummary>=1.5.1",
 ]
